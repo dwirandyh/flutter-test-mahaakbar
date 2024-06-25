@@ -22,7 +22,8 @@ class UserListBloc extends Bloc<UserListEvent, UserListState> {
   final int itemPerPages = 6;
 
   UserListBloc({required this.userRepository}) : super(const UserListState()) {
-    on<UserListFetched>(_onUserFetched);
+    on<UserListFetched>(_onUserFetched,
+        transformer: throttleDroppable(throttleDuration));
   }
 
   void _onUserFetched(
@@ -35,7 +36,7 @@ class UserListBloc extends Bloc<UserListEvent, UserListState> {
           users.addAll(await userRepository.getUsers(2));
           emit(state.copyWith(
             status: UserListStatus.success,
-            users: users,
+            users: List.of(users),
             hasReachedMax: false,
           ));
         } else {

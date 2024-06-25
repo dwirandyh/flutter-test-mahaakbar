@@ -1,4 +1,6 @@
-class CreatedUserModel {
+import 'package:equatable/equatable.dart';
+
+class CreatedUserModel extends Equatable {
   final int id;
   final String name;
   final String job;
@@ -18,4 +20,7 @@ class CreatedUserModel {
       createdAt: DateTime.tryParse(json['createdAt']),
     );
   }
+
+  @override
+  List<Object?> get props => [id, name, job, createdAt];
 }

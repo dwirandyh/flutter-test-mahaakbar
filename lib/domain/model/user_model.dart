@@ -1,11 +1,13 @@
-class UserModel {
+import 'package:equatable/equatable.dart';
+
+class UserModel extends Equatable {
   final int id;
   final String email;
   final String firstName;
   final String lastName;
   final String avatar;
 
-  UserModel({
+  const UserModel({
     required this.id,
     required this.email,
     required this.firstName,
@@ -22,4 +24,8 @@ class UserModel {
       avatar: json['avatar'],
     );
   }
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [id, email, firstName, lastName, avatar];
 }

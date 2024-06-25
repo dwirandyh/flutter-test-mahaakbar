@@ -1,11 +1,17 @@
 part of 'create_user_bloc.dart';
 
 @immutable
-sealed class CreateUserState {}
+sealed class CreateUserState extends Equatable {}
 
-final class CreateUserInitial extends CreateUserState {}
+final class CreateUserInitial extends CreateUserState {
+  @override
+  List<Object?> get props => [];
+}
 
-final class CreateUserLoading extends CreateUserState {}
+final class CreateUserLoading extends CreateUserState {
+  @override
+  List<Object?> get props => [];
+}
 
 final class CreateUserSuccess extends CreateUserState {
   final CreatedUserModel user;

@@ -24,8 +24,9 @@ This project uses the following packages for testing:
 ## Getting Started
 
 1. Clone the repository
-2. Run `flutter pub get` to install dependencies
-3. Run `flutter run` to start the application
+2. Ensure you have Flutter 3.16.0 or later installed
+3. Run `flutter pub get` to install dependencies
+4. Run `flutter run` to start the application
 
 ## Running Tests
 

@@ -1,16 +1,36 @@
-# user_collection
+# User Management App
 
-Flutter Test for Maha Akbar Sejahtera
+A Flutter application for managing users with two screens: a user list and a create new user form. This project uses BLoC for state management and Dio for HTTP networking.
+
+## Features
+
+- View infinite list of users
+- Create new user
+- BLoC state management
+- HTTP networking with Dio
+
+## Dependencies
+
+- [flutter_bloc](https://pub.dev/packages/flutter_bloc) for state management
+- [dio](https://pub.dev/packages/dio) for HTTP networking
+
+## Testing
+
+This project uses the following packages for testing:
+
+- [bloc_test](https://pub.dev/packages/bloc_test) for testing BLoCs
+- [mocktail](https://pub.dev/packages/mocktail) for mocking in tests
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository
+2. Run `flutter pub get` to install dependencies
+3. Run `flutter run` to start the application
 
-A few resources to get you started if this is your first Flutter project:
+## Running Tests
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+To run the tests, use the following command:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash 
+flutter test
+```
